@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    //if (req.session) {
+    if (req.session) {
         Comment.create({
             comment_text: req.body.comment_text,
             user_id: req.session.user_id,
@@ -24,7 +24,7 @@ router.post('/', (req, res) => {
         console.log(err);
         res.status(400).json(err);
         });
-    //}
+    }
 });
 
 router.delete('/:id', (req, res) => {
