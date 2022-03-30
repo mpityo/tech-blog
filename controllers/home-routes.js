@@ -34,6 +34,7 @@ router.get("/", (req, res) => {
     });
 });
 
+// send uesr to login page if they are not logged in
 router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/");
@@ -41,6 +42,16 @@ router.get("/login", (req, res) => {
   }
 
   res.render("login");
+});
+
+// send uesr to sign-up page if they are not logged in
+router.get("/sign-up", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+
+  res.render("sign-up");
 });
 
 router.get("/post/:id", (req, res) => {
@@ -66,7 +77,7 @@ router.get("/post/:id", (req, res) => {
   })
     .then((dbPostData) => {
       if (!dbPostData) {
-        res.status(404).json({ message: "No post fopund with this id!" });
+        res.status(404).json({ message: "No post found with this id!" });
         return;
       }
 
