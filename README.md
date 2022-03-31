@@ -16,7 +16,7 @@ Join others across the web in discussing and reading about technology in a blog 
 ## 🚚Installation
 ** This requires SQL to be installed and set up first **
 <br>
-** This is for a local copy. Alternatively you may visit the heroku page [here]()**
+** This is for a local copy. Alternatively you may visit the heroku page [here](https://tech-blog-211.herokuapp.com/)**
 1. Clone the codebase from the [repo](https://github.com/mpityo/tech-blog).
 2. Query to the root file directory in any command prompt
 3. Run the following command to install required packages:
@@ -65,3 +65,7 @@ Full code, functionality, and design by yours truly @mpityo
 You may reach me at GitHub under [mpityo](https://github.com/mpityo)
 <br>
 You can also shoot an email to [mpityo@gmail.com](mailto:mpityo@gmail.com)
+
+<img src="./public/images/signup-page.png" alt="sign up page asking for username, email, and password" width="1000"/>
+<img src="./public/images/dashboard.png" alt="user dashboard that prompts user to enter a post, or edit older posts" width="1000"/>
+<img src="./public/images/edit-post.png" alt="edit post page for a specific post, with title and content filled in and post comments on bottom" width="1000"/>
