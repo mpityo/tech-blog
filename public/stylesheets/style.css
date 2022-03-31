@@ -1,0 +1,30 @@
+ol {
+    list-style: none;
+}
+
+.page-header {
+    border-bottom: 2px black solid;
+    max-width: 25rem;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    padding-top: 10px;
+}
+
+.comment-form {
+    margin-bottom: 5%;
+  }
+  
+  .comment {
+    padding: 1%;
+    margin-bottom: 1%;
+  }
+  
+  .comment:nth-child(odd) {
+    background-color: #d5ecee;
+  }
+  
+  .comment .meta {
+    font-size: 90%;
+    margin-bottom: .5%;
+    opacity: .6;
+  }

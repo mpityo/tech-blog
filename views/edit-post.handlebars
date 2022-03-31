@@ -1,33 +1,43 @@
-<article>
-  <a href="/dashboard"> &larr; Back to dashboard</a>
-  <h2>
+<section class="mt-3 container">
+<div class="page-header mb-2">
+    <h1>Dashboard</h1>
+</div>
+<a href="/dashboard"> &larr; Back to dashboard</a>
+
+<section class="card bg-light mb-4 mt-4">
+  <h2 class="card-title ms-4 pt-2">
     Edit Post
   </h2>
-  <form class="edit-post-form">
+  <form class="edit-post-form new-post-form card-body">
     <div>
-      <input name="post-title" type="text" value="{{post.title}}" />
+      <input class="form-control" name="post-title" type="text" value="{{post.title}}" style="max-width: 600px;" />
     </div>
     <div>
-      <textarea name="post-content" id="post-content">{{post.content}}</textarea>
+      <textarea class="form-control mt-2" name="post-content" id="post-content">{{post.content}}</textarea>
     </div>
-    <div>
+    <div class="text-muted">
       By you on {{format_date post.created_at}}
       |
       <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
     </div>
-    <button type="submit">Save post</button>
-    <button type="button" class="delete-post-btn">Delete post</button>
+    <button type="submit" class="btn btn-md btn-success mt-3">Save post</button>
+    <button type="button" class="delete-post-btn btn btn-md btn-danger mt-3">Delete post</button>
   </form>
 </article>
-<form class="comment-form">
+</section>
+
+<section>
+  <h2>Post comments</h2>
+  {{> comments post.comments}}
+<form class="comment-form mt-3">
   <div>
-    <textarea name="comment-body"></textarea>
+    <textarea name="comment-body" class="form-control" name="comment-body" placeholder="comment text" style="max-width: 700px;"></textarea>
   </div>
   <div>
-    <button type="submit">add comment</button>
+    <button type="submit" class="btn btn-md btn-secondary mt-3">add comment</button>
   </div>
 </form>
-{{> comments post.comments}}
+</section>
 
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
