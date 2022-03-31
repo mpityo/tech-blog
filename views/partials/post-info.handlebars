@@ -1,9 +1,10 @@
 <div class="col">
-<article class="post card p-2">
+<article class="post card p-2 h-100">
   <div class="card-body">
     <h2 class="card-title">{{title}}</h2>
     <div class="content card-content">
       <p>{{content}}</p>
+    </div>
     </div>
 
     <div class="meta card-footer text-muted">
@@ -12,9 +13,8 @@
       on
       {{format_date created_at}}
       |
-      <a class="card-link" href="/post/{{id}}">{{comments.length}}
+      <a class="card-link stretched-link" href="/post/{{id}}">{{comments.length}}
         {{format_plural "comment" comments.length}}</a>
     </div>
-  </div>
 </article>
 </div>

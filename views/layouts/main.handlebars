@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
 
-  <body>
-    <div class="wrapper">
+  <body class="d-flex flex-column h-100">
+    <div class="wrapper flex-shrink-0">
       <nav class="navbar navbar-expand navbar-dark bg-dark">
         <div class="container-md">
           
@@ -54,10 +54,15 @@
       <main>
         {{{body}}}
       </main>
-      <footer>
-        Thanks for visiting!
-      </footer>
     </div>
+    <footer class="navbar navbar-expand mt-auto py-3 bg-light">
+        <div class="container-fluid">
+        <p class="text-muted">Made with &hearts; by 
+          <a class="link" href="https://www.github.com/mpityo" target="_blank">Matt Pityo</a>
+        </p>
+        <p>&COPY;2022</p>
+        </div>
+      </footer>
 
     {{#if loggedIn}}
       <script src="/javascript/logout.js"></script>
